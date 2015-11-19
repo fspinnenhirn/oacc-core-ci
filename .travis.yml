@@ -37,6 +37,7 @@ install:
   - git clone https://github.com/acciente/oacc-db.git oacc-db
   - cd oacc-db
   - if git show-ref --verify --quiet refs/heads/$TRAVIS_BRANCH; then git checkout $TRAVIS_BRANCH; fi
+  - cd ..
 
 before_script:
   - sh -c "if [ '$DB' = 'sqlite' ]; then sqlite3 oacc '.read ./SQLite_3_8/create_tables.sql'; fi"
