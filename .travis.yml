@@ -45,7 +45,7 @@ before_script:
 ###  - sh -c "if [ '$DB' = 'mysql' ];      then mysql -e 'create database IF NOT EXISTS mydb;'; fi"
 
 script:
-  - mvn test -Dmaven.test.skip=false -Dtest=com.acciente.oacc.TestAll -Ddbconfig=dbconfig_sqlite.properties
+  - mvn test -Dmaven.test.skip=false -Dtest=com.acciente.oacc.TestAccessControl_setExternalId -Ddbconfig=dbconfig_sqlite.properties
 
 ### after_success:
 
